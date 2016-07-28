@@ -1,0 +1,26 @@
+// Hidden
+//
+// Hide from both screenreaders and browsers
+//
+// @usage - `@include hidden`
+
+.hidden {
+  display: none !important;
+  visibility: hidden;
+}
+
+.mobile-hidden {
+  @include screen-size('small') {
+    display: none;
+  }
+}
+
+// Invisible
+//
+// Hide visually and from screenreaders, but maintain layout
+//
+// @usage - `@include invisible`
+
+.invisible { 
+  visibility: hidden; 
+}
