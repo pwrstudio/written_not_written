@@ -9,63 +9,61 @@ function slides(context) {
 
   return {
     loop: {},
-    currentImage: {},
-    imageContainer: context.children('.image-container'),
+    currentSlide: {},
+    slideContainer: context.children('.slides-container'),
     setup: function setup() {
-
-      this.currentImage = this.imageContainer.children('.shown');
+      
+      this.currentSlide = this.slideContainer.children('.shown');
+      
+      $(".caption").html(this.currentSlide.data("caption"));
+      $('#index').html(this.currentSlide.index() + 1);
+      $('#total').text(this.slideContainer.children().length);
 
     },
     next: function next() {
+      
+      console.log(this.currentSlide);
 
-      $(this.currentImage).removeClass("shown");
+      $(this.currentSlide).removeClass("shown");
 
-      if (this.currentImage.is(':last-child')) {
-        this.imageContainer
-          .find('img')
+      if (this.currentSlide.is(':last-child')) {
+        this.slideContainer
+          .find('.slide')
           .first()
           .addClass("shown");
       } else {
-        this.currentImage
-          .next("img")
+        this.currentSlide
+          .next(".slide")
           .addClass("shown");
       }
 
-      this.currentImage = this.imageContainer.children('.shown');
+      this.currentSlide = this.slideContainer.children('.shown');
+
+      $(".caption").html(this.currentSlide.data("caption"));
+      $('#index').html(this.currentSlide.index() + 1);
 
     },
     previous: function previous() {
+      
+      console.log(this.currentSlide);
 
-      $(this.currentImage).removeClass("shown");
+      $(this.currentSlide).removeClass("shown");
 
-      if (this.currentImage.is(':first-child')) {
-        this.imageContainer
-          .find('img')
+      if (this.currentSlide.is(':first-child')) {
+        this.slideContainer
+          .find('.slide')
           .last()
           .addClass("shown");
       } else {
-        this.currentImage
-          .prev("img")
+        this.currentSlide
+          .prev(".slide")
           .addClass("shown");
       }
 
-      this.currentImage = this.imageContainer.children('.shown');
+      this.currentSlide = this.slideContainer.children('.shown');
 
-    },
-    start: function start(delay) {
-
-      var parent = this;
-
-      this.loop = setInterval(function () {
-
-        parent.next();
-
-      }, delay);
-
-    },
-    stop: function stop() {
-
-      clearInterval(this.loop);
+      $(".caption").html(this.currentSlide.data("caption"));
+      $('#index').html(this.currentSlide.index() + 1);
 
     }
   };

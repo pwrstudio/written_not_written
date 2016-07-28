@@ -1,0 +1,13 @@
+.menu {
+  margin-top: $line-height / 4;
+  a {
+    margin-right: 30px;
+  }
+}
+
+.about-menu {
+  position: fixed;
+  bottom: $margin;
+  right: $margin;
+  z-index: 10000;
+}

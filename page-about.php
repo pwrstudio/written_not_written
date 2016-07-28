@@ -1,0 +1,20 @@
+<?php get_header(); ?>
+
+  <header>
+    <div>
+      <strong>
+        <a href='<?php echo get_site_url();?>'>written–not–written</a>
+      </strong>
+    </div>
+    <div><em><?php echo get_the_title();?></em></div>
+    <?php $cv = get_field('cv'); ?>
+    <a href='<?php echo $cv['url']; ?>' target=_blank download>download cv</a>
+  </header>
+
+  <div class="text-container">
+    <?php if (have_posts()) : while (have_posts()) : the_post(); ?>
+      <?php the_content();?>
+    <?php endwhile; endif;?>
+  </div>
+
+<?php get_footer(); ?>    

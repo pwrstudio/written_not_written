@@ -26,11 +26,11 @@
   <meta name="msapplication-TileColor" content="#bebebe">
   <meta name="msapplication-TileImage" content="<?php echo $tempdir;?>/img/favicons/ms-icon-144x144.png">
 
-  <title><?php wp_title(" | ", TRUE, "RIGHT"); ?></title>
+  <title>written–not–written <?php wp_title(" | ", TRUE, "RIGHT"); ?></title>
 
   <?php wp_head(); ?>
     
 </head>
 
 <body>
-
+  

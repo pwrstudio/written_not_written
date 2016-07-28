@@ -1,4 +1,4 @@
-.image-container {
+.slides-container {
   width: 100%;
   height: 100%;
   left: 0;
@@ -6,7 +6,6 @@
   position: fixed;
   img {
     max-height: 100%;
-    display: block;
     margin-left: auto;
     margin-right: auto;
     position: relative;
@@ -14,21 +13,30 @@
     transform: translateY(-50%);
     pointer-events: all;
     display: none;
+    @include screen-size('small') {
+      max-height: 80%;
+      max-width: 100%;
+      z-index: 0;
+      pointer-events: none;
+    }
+  }
+  div {
+    display: none;
+    &.shown {
+      position: fixed;
+      left: 50%;
+      width: 90%;
+      width: 30em;
+      margin-left: -15em;
+      margin-right: auto;
+      top: 160px;
+      z-index: 4000;
+    }
   }
 }
 
 .shown {
   display: block !important;
-}
-
-.intro-image-container {
-  width: 100%;
-  height: 100%;
-  position: fixed;
-  top: 0;
-  left: 0;
-  background-position: center;
-  background-size: cover;
 }
 
 .nav-overlay {
