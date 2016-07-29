@@ -7,4 +7,5 @@ cp -v ./*.php ../$NAME-$TIME-$NICK/
 cp -v ./app.min.js ../$NAME-$TIME-$NICK/
 cp -v ./style.css ../$NAME-$TIME-$NICK/
 rsync -av ./img/ ../$NAME-$TIME-$NICK/img
+rsync -av ./components/ ../$NAME-$TIME-$NICK/components
 rsync -av ./fonts/ ../$NAME-$TIME-$NICK/fonts
