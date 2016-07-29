@@ -1,13 +1,13 @@
 header {
   position: fixed;
   z-index: 1000;
-  margin: 3 * $line-height;
+  margin-top: 3 * $line-height;
   margin-bottom: $line-height;
-  width: calc(100% - 100px);
+  width: 100%;
   text-align: center;
   z-index: 1000000;
   @include screen-size('small') {
-    margin: $margin / 2;
+    margin-top: $margin / 2;
   }
 }
 

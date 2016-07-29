@@ -7,9 +7,9 @@ body {
   line-height: $line-height;
   color: $main-color;
   background: $background-color;
-  @include screen-size('small') {
-    line-height: 1.3 * $line-height;
-  }
+//  @include screen-size('small') {
+//    line-height: 1.3 * $line-height;
+//  }
 }
 
 a {
@@ -43,61 +43,4 @@ h3 {
   height: 0;
   width: 0;
   visibility: hidden;
-}
-
-//MOBILE PHONE
-@media only screen and (max-width: 768px) {
-  .container-fluid {
-    padding-left: $line-height;
-  }
-  .about-container {
-    column-count: 1;
-  }
-  .slide-container {
-    img {
-      max-height: 80%;
-      max-width: 100%;
-      z-index: 0;
-      pointer-events: none;
-    }
-  }
-  .about-caption {
-    margin-top: 2 * $line-height;
-    position: static;
-    left: 0;
-  }
-  .nav-container {
-    left: $line-height;
-  }
-  .main-menu {
-    top: $line-height;
-  }
-  .previous {
-    display: none;
-  }
-  .next {
-    left: 0%;
-    width: 100%;
-    cursor: pointer;
-  }
-  .right {
-    float: left;
-    width: 100%;
-  }
-  .left {
-    display: block;
-    width: 100%;
-  }
-  .caption {
-    left: $margin / 2;
-  }
-  .caption-mobile {
-    position: static;
-    display: block;
-    margin-top: 2 * $line-height;
-  }
-  .container-menu {
-    margin: $margin / 2;
-    width: calc(100% - 50px);
-  }
 }

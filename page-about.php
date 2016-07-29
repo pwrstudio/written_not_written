@@ -1,5 +1,7 @@
 <?php get_header(); ?>
 
+<body class='about'>
+
   <header>
     <div>
       <strong>
@@ -16,5 +18,7 @@
       <?php the_content();?>
     <?php endwhile; endif;?>
   </div>
+  
+</body>
 
 <?php get_footer(); ?>    

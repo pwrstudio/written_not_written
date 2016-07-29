@@ -1,17 +1,32 @@
-.text-container {
-  position: fixed;
-  left: 50%;
-  width: 90%;
-  width: 30em;
-  margin-left: -15em;;
-  margin-right: auto;
-  top: 160px;
-}
-
-p {
-  break-inside: avoid;
-  text-indent: $font-size;
-  &:first-of-type {
-    text-indent: 0;
+.about {
+  
+  header {
+    position: static;
   }
+  
+  .text-container {
+    position: fixed;
+    left: 50%;
+    width: 30em;
+    margin-left: -15em;
+    margin-right: auto;
+    top: 160px;
+    @include screen-size('small') {
+      position: static;
+      width: 90%;
+      max-width: 30em;
+      margin-left: auto;
+      margin-right: auto;
+      margin-bottom: 4 * $line-height;
+    }
+  }
+  
+  p {
+    break-inside: avoid;
+    text-indent: $font-size;
+    &:first-of-type {
+      text-indent: 0;
+    }
+  }
+  
 }

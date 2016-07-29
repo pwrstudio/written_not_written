@@ -6,15 +6,12 @@
   position: fixed;
   img {
     max-height: 100%;
-    margin-left: auto;
-    margin-right: auto;
-    position: relative;
-    top: 50%;
-    transform: translateY(-50%);
+    max-width: 100%;
+    @include center;
     pointer-events: all;
     display: none;
     @include screen-size('small') {
-      max-height: 80%;
+      max-height: 100%;
       max-width: 100%;
       z-index: 0;
       pointer-events: none;
@@ -25,12 +22,16 @@
     &.shown {
       position: fixed;
       left: 50%;
-      width: 90%;
       width: 30em;
       margin-left: -15em;
       margin-right: auto;
       top: 160px;
       z-index: 4000;
+      @include screen-size('small') {
+        width: 90%;
+        margin-left: 5%;
+        left: 0;
+      }
     }
   }
 }
