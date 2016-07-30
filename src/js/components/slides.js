@@ -41,6 +41,10 @@ function slides(context) {
 
       $(".caption").html(this.currentSlide.data("caption"));
       $('#index').html(this.currentSlide.index() + 1);
+      $(".extended-caption").html(this.currentSlide.data("extended"));     
+      if(this.currentSlide.data("pdf")) {
+        $(".extended-caption").html('<a href="'+ this.currentSlide.data("pdf") + '" target=_blank download>download pdf</a>');  
+      }
 
     },
     previous: function previous() {
@@ -64,7 +68,10 @@ function slides(context) {
 
       $(".caption").html(this.currentSlide.data("caption"));
       $('#index').html(this.currentSlide.index() + 1);
-
+      $(".extended-caption").html(this.currentSlide.data("extended"));     
+      if(this.currentSlide.data("pdf")) {
+        $(".extended-caption").html('<a href="'+ this.currentSlide.data("pdf") + '" target=_blank download>download pdf</a>');  
+      }
     }
   };
 
