@@ -127,20 +127,43 @@ function my_page_columns($columns)
 {
 	$columns = array(
 		'cb'	 	=> '<input type="checkbox" />',
-		'thumbnail'	=>	'Image',
 		'title' 	=> 'Title',
-		'categories'	=>	'Categories',
 	);
 	return $columns;
 }
-function my_custom_columns($column)
-{
-	global $post;
-	if($column == 'thumbnail')
-	{
-        $image = get_field('image', $post->ID);
-		echo '<img src="' . $image[sizes][thumbnail] . '">';
-	}
-}
-add_action("manage_posts_custom_column", "my_custom_columns");
+//function my_custom_columns($column)
+//{
+//	global $post;
+//	if($column == 'thumbnail')
+//	{
+//        $image = get_field('image', $post->ID);
+//		echo '<img src="' . $image[sizes][thumbnail] . '">';
+//	}
+//}
+//add_action("manage_posts_custom_column", "my_custom_columns");
 add_filter("manage_edit-post_columns", "my_page_columns");
+
+/*-------------------------------------------------------------------------------
+	Custom Toolbar
+-------------------------------------------------------------------------------*/
+
+add_filter( 'acf/fields/wysiwyg/toolbars' , 'my_toolbars'  );
+function my_toolbars( $toolbars )
+{
+	// Uncomment to view format of $toolbars
+	
+//	echo '< pre >';
+//		print_r($toolbars);
+//	echo '< /pre >';
+//	die;
+	
+
+	// Add a new toolbar called "Very Simple"
+	// - this toolbar has only 1 row of buttons
+	$toolbars['PWR' ] = array();
+	$toolbars['PWR' ][1] = array('italic' , 'link' , 'unlink' );
+
+
+	// return $toolbars - IMPORTANT!
+	return $toolbars;
+}

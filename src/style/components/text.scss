@@ -1,9 +1,7 @@
 .about {
-  
   header {
     position: static;
   }
-  
   .text-container {
     position: fixed;
     left: 50%;
@@ -20,13 +18,11 @@
       margin-bottom: 4 * $line-height;
     }
   }
-  
   p {
     break-inside: avoid;
-    text-indent: $font-size;
-    &:first-of-type {
-      text-indent: 0;
-    }
+    //    text-indent: $font-size;
+    //    &:first-of-type {
+    //      text-indent: 0;
+    //    }
   }
-  
 }

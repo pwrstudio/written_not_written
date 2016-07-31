@@ -9,6 +9,9 @@ header {
   @include screen-size('small') {
     margin-top: $margin / 2;
   }
+  p {
+    display: inline;
+  }
 }
 
 .inner-header {
