@@ -1,18 +1,20 @@
 .menu {
-  margin-top: $line-height / 4;
+  margin-top: 1px;
   a {
-    margin-right: 30px;
-    @include screen-size('small') {
-      margin-bottom: $line-height / 4;
-      margin-right: 0;
-      display: block;
-    }
+    margin-right: 8px;
+    //    @include screen-size('small') {
+    //      margin-bottom: $line-height / 4;
+    //      margin-right: 0;
+    //      display: block;
+    //    }
   }
 }
 
 .about-menu {
   position: fixed;
-  bottom: $margin;
-  right: $margin;
+  bottom: 140px;
+  right: 45px;
   z-index: 10000;
+  transform: rotateZ(-90deg);
+  transform-origin: right bottom;
 }

@@ -8,7 +8,7 @@
         <a href='<?php echo get_site_url();?>'>written–not–written</a>
       </strong>
     </div>
-    <div><em><?php echo get_the_title();?></em></div>
+    <div><?php echo get_the_title();?></div>
     <?php $cv = get_field('cv'); ?>
     <a href='<?php echo $cv['url']; ?>' target=_blank download>download cv</a>
   </header>
