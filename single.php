@@ -13,13 +13,9 @@
 
   </header>
 
-  <?php // Navigation ?>
-  <div class="nav-overlay previous"></div>
-  <div class="nav-overlay next"></div>
-
   <div id='slides'>
     <div class="slides-container">
-
+      
     <?php $i = 0;?>
 
     <?php // Get all slides ?>
@@ -88,11 +84,14 @@
       <?php endwhile; ?>
     <?php endif; ?>
 
-
     </div>
   </div>
   
   <a href='about' class='about-menu'>about / contact</a>
+  
+  <?php // Navigation ?>
+  <div class="nav-overlay previous"></div>
+  <div class="nav-overlay next"></div>
 
 </body>  
   

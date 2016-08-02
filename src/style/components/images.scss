@@ -1,9 +1,9 @@
 .slides-container {
-  width: 100%;
-  height: 100%;
-  left: 0;
-  top: 0;
-  position: fixed;
+  //  width: 100%;
+  //  height: 100%;
+  //  left: 0;
+  //  top: 0;
+  //  position: absolute;
   img {
     max-height: 100%;
     max-width: 100%;
@@ -16,6 +16,13 @@
       z-index: 0;
       pointer-events: none;
     }
+  }
+  iframe {
+    @include center;
+    position: fixed;
+    max-width: 90%;
+    z-index: 100000;
+//    z-index: 100;
   }
   div {
     display: none;
@@ -38,14 +45,16 @@
 
 .shown {
   display: block !important;
+  z-index: 1000;
 }
 
 .nav-overlay {
+  display: block !important;
   height: 100%;
   top: 0;
   position: absolute;
   width: 50%;
-  z-index: 900;
+  z-index: 1000;
   background: none;
 }
 
