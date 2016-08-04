@@ -13,7 +13,7 @@
     <img src="<?php echo $image['sizes']['pwr-large']; ?>" data-caption="<?php echo the_sub_field('caption'); ?>" class='slide shown'>
   </div>
   
-  <a href='about' class='about-menu'>about / contact</a>
+  <div class='about-menu'>about / contact</div>
   
 </body>
 

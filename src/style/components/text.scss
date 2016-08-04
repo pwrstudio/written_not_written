@@ -2,27 +2,40 @@
   header {
     position: static;
   }
-  .text-container {
-    position: fixed;
-    left: 50%;
-    width: 30em;
-    margin-left: -15em;
+}
+
+.text-container {
+  position: fixed;
+  left: 50%;
+  height: calc(100vh - 120px);
+  width: 30em;
+  margin-left: -15em;
+  margin-right: auto;
+  top: 120px;
+  z-index: 10000;
+//  overflow-y: auto;
+  overflow-y: scroll;
+  display: none;
+  padding-bottom: $line-height;
+  @include hide-scroll;
+  &.active {
+    display: block;
+  }
+  @include screen-size('small') {
+    width: 90%;
+    left: 5%;
+    margin-left: auto;
     margin-right: auto;
-    top: 160px;
-    @include screen-size('small') {
-      position: static;
-      width: 90%;
-      max-width: 30em;
-      margin-left: auto;
-      margin-right: auto;
-      margin-bottom: 4 * $line-height;
-    }
+    margin-bottom: 4 * $line-height;
+    height: calc(100vh - 100px);
+    top: 100px;
   }
-  p {
-    break-inside: avoid;
-    //    text-indent: $font-size;
-    //    &:first-of-type {
-    //      text-indent: 0;
-    //    }
-  }
+}
+
+p {
+  break-inside: avoid;
+  //    text-indent: $font-size;
+  //    &:first-of-type {
+  //      text-indent: 0;
+  //    }
 }

@@ -22,7 +22,7 @@
     position: fixed;
     max-width: 90%;
     z-index: 100000;
-//    z-index: 100;
+    //    z-index: 100;
   }
   div {
     display: none;
@@ -61,9 +61,15 @@
 .previous {
   left: 0%;
   cursor: url('img/left.png'), w-resize;
+  @include screen-size('small') {
+    cursor: pointer;
+  }
 }
 
 .next {
   left: 50%;
   cursor: url('img/right.png'), e-resize;
+  @include screen-size('small') {
+    cursor: pointer;
+  }
 }

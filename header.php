@@ -31,3 +31,11 @@
   <?php wp_head(); ?>
     
 </head>
+  
+  
+<?php // Get page by name ?>
+  
+<div class="text-container">
+  <?php $about = get_page_by_title( 'about' );?>
+  <?php echo get_field('main_text', $about->ID);?>
+</div>

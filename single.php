@@ -87,7 +87,7 @@
     </div>
   </div>
   
-  <a href='about' class='about-menu'>about / contact</a>
+  <div class='about-menu'>about / contact</div>
   
   <?php // Navigation ?>
   <div class="nav-overlay previous"></div>

@@ -23,6 +23,11 @@
     // Prev. image
     $(document).on('click', '.previous', function (e) {
       debounce(slideshow.previous(), 200);
+    });    
+    
+    // Prev. image
+    $(document).on('click', '.about-menu', function (e) {
+      $('.text-container').toggleClass('active');
     });
 
   });

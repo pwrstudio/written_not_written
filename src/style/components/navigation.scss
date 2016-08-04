@@ -17,4 +17,11 @@
   z-index: 10000;
   transform: rotateZ(-90deg);
   transform-origin: right bottom;
+  cursor: pointer;
+  &:hover {
+    color: $link-color;
+  }
+  @include screen-size('small') {
+     right: 25px;
+  }
 }
