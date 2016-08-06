@@ -8,7 +8,7 @@
         <a href='<?php echo get_site_url();?>'>written–not–written</a>
       </strong>
     </div>
-    <div><?php echo get_the_title();?> (<span id='index'></span>/<span id='total'></span>): <span class="caption"></span></div>
+    <div><strong><?php echo get_the_title();?></strong> (<span id='index'></span>/<span id='total'></span>): <span class="caption"></span></div>
     <div class='extended-caption'></div>
 
   </header>
@@ -49,7 +49,7 @@
           <?php // Else: video slide ?>
           <?php else: ?>
       
-            <div class='slide shown' data-caption="<?php echo the_sub_field('caption'); ?>" data-extended='<?php echo the_sub_field('extended_caption'); ?>' data-pdf='<?php echo $pdf['url'];?>'>
+            <div class='slide shown code' data-caption="<?php echo the_sub_field('caption'); ?>" data-extended='<?php echo the_sub_field('extended_caption'); ?>' data-pdf='<?php echo $pdf['url'];?>'>
               <?php echo get_sub_field('code');?>
             </div>
       
@@ -74,7 +74,7 @@
             </div>
       
           <?php else: ?>
-            <div class='slide' data-caption="<?php echo the_sub_field('caption'); ?>" data-extended='<?php echo the_sub_field('extended_caption'); ?>' data-pdf='<?php echo $pdf['url'];?>'>
+            <div class='slide code' data-caption="<?php echo the_sub_field('caption'); ?>" data-extended='<?php echo the_sub_field('extended_caption'); ?>' data-pdf='<?php echo $pdf['url'];?>'>
               <?php echo get_sub_field('code');?>
             </div>
           <?php endif; ?>

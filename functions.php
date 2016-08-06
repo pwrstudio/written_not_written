@@ -161,7 +161,7 @@ function my_toolbars( $toolbars )
 	// Add a new toolbar called "Very Simple"
 	// - this toolbar has only 1 row of buttons
 	$toolbars['PWR' ] = array();
-	$toolbars['PWR' ][1] = array('italic' , 'link' , 'unlink' );
+	$toolbars['PWR' ][1] = array('italic' , 'bold', 'link' , 'unlink' );
 
 
 	// return $toolbars - IMPORTANT!
