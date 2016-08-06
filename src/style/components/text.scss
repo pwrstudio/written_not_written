@@ -17,7 +17,7 @@
   padding-top: 0px;
   z-index: 1000000;
   background-color: white;
-  padding-top: 60px;
+  padding-top: 18px;
   @include hide-scroll;
   &.active {
     display: block;
@@ -29,8 +29,8 @@
     margin-left: auto;
     margin-right: auto;
     margin-bottom: 4 * $line-height;
-    height: calc(100vh - 100px);
-    top: 100px;
+    height: 100vh;
+    //    top: 100px;  
   }
   p {
     break-inside: avoid;

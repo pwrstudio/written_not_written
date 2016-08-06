@@ -24,6 +24,7 @@
     color: $main-color;
   }
   @include screen-size('small') {
-    right: 25px;
+    right: 15px;
+    bottom: 120px;
   }
 }
