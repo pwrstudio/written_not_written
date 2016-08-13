@@ -17,11 +17,15 @@
       pointer-events: none;
     }
   }
+  audio,
   iframe {
     @include center;
     position: fixed;
     max-width: 90%;
     z-index: 100000;
+    @include screen-size('small') {
+      max-height: 200px;
+    }
     //    z-index: 100;
   }
   div {

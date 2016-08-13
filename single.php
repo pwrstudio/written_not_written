@@ -46,11 +46,25 @@
               <?php echo get_sub_field('text');?>
             </div>
       
+          <?php // If audio slide ?>
+          <?php elseif(get_sub_field('media_type') == 'Audio'):?>
+      
+            <?php // get audio and pdf fields ?>
+            <?php $pdf = get_sub_field('pdf_file'); ?>
+            <?php $audio = get_sub_field('audio_file'); ?>
+            
+            <?php // Output with class 'shown' ?>
+            <div class='slide audio shown' data-caption="<?php echo the_sub_field('caption'); ?>" data-extended='<?php echo the_sub_field('extended_caption'); ?>' data-pdf='<?php echo $pdf['url'];?>'>
+              <audio src="<?php echo $audio['url']; ?>" controls data-caption="<?php echo the_sub_field('caption'); ?>" data-extended='<?php echo the_sub_field('extended_caption'); ?>' data-pdf='<?php echo $pdf['url'];?>' class='slide shown'></audio>
+            </div>
+      
           <?php // Else: video slide ?>
           <?php else: ?>
       
             <div class='slide shown code' data-caption="<?php echo the_sub_field('caption'); ?>" data-extended='<?php echo the_sub_field('extended_caption'); ?>' data-pdf='<?php echo $pdf['url'];?>'>
-              <?php echo get_sub_field('code');?>
+<!--              <div class='embed-responsive embed-responsive-16by9'>  -->
+                <?php echo get_sub_field('code');?>
+<!--              </div>-->
             </div>
       
           <?php endif;?>
@@ -66,6 +80,7 @@
             <?php $pdf = get_sub_field('pdf_file'); ?>
 
             <img src="<?php echo $image['sizes']['pwr-large']; ?>" data-caption="<?php echo the_sub_field('caption'); ?>" data-extended='<?php echo the_sub_field('extended_caption'); ?>' data-pdf='<?php echo $pdf['url'];?>' class='slide'>
+          
           <?php elseif(get_sub_field('media_type') == 'Text'):?>
       
             <?php $pdf = get_sub_field('pdf_file'); ?>
@@ -73,9 +88,23 @@
               <?php echo get_sub_field('text');?>
             </div>
       
+          <?php // If audio slide ?>
+          <?php elseif(get_sub_field('media_type') == 'Audio'):?>
+      
+            <?php // get audio and pdf fields ?>
+            <?php $pdf = get_sub_field('pdf_file'); ?>
+            <?php $audio = get_sub_field('audio_file'); ?>
+            
+            <?php // Output with class 'shown' ?>
+            <div class='slide audio' data-caption="<?php echo the_sub_field('caption'); ?>" data-extended='<?php echo the_sub_field('extended_caption'); ?>' data-pdf='<?php echo $pdf['url'];?>'>
+              <audio src="<?php echo $audio['url']; ?>" controls data-caption="<?php echo the_sub_field('caption'); ?>" data-extended='<?php echo the_sub_field('extended_caption'); ?>' data-pdf='<?php echo $pdf['url'];?>' class='slide shown'></audio>
+            </div>
+      
           <?php else: ?>
             <div class='slide code' data-caption="<?php echo the_sub_field('caption'); ?>" data-extended='<?php echo the_sub_field('extended_caption'); ?>' data-pdf='<?php echo $pdf['url'];?>'>
-              <?php echo get_sub_field('code');?>
+<!--              <div class='embed-responsive embed-responsive-16by9'>  -->
+                <?php echo get_sub_field('code');?>
+<!--              </div>-->
             </div>
           <?php endif; ?>
       
