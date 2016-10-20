@@ -99,7 +99,7 @@ gulp.task('watch', function () {
   gulp.watch('src/img/*', ['images']);
 
   // Watch fonts
-  gulp.watch('src/fonts/*.{ttf,otf}"', ['font']);
+    gulp.watch('src/fonts/*.{ttf,otf}"', ['font']);
 });
 
 // Analyze CSS
@@ -109,7 +109,7 @@ gulp.task('parker', function () {
 });
 
 // Default Task
-gulp.task('default', ['scripts', 'sass', 'watch', 'browser-sync', 'images', 'font']);
+gulp.task('default', ['scripts', 'sass', 'watch', 'browser-sync', 'images']);
 
 function sassErrorAlert(error) {
   notify.onError({

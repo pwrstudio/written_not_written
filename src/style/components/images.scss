@@ -1,21 +1,17 @@
 .slides-container {
-  //  width: 100%;
-  //  height: 100%;
-  //  left: 0;
-  //  top: 0;
-  //  position: absolute;
+
   img {
     max-height: 100%;
     max-width: 100%;
-    @include center;
-    pointer-events: all;
-    display: none;
     @include screen-size('small') {
       max-height: 100%;
       max-width: 100%;
       z-index: 0;
       pointer-events: none;
     }
+    @include center;
+    pointer-events: all;
+    display: none;
   }
   audio,
   iframe {
@@ -76,4 +72,10 @@
   @include screen-size('small') {
     cursor: pointer;
   }
+}
+
+.full-screen {
+  width: 100vw !important;
+  height: 100vh !important;
+  object-fit: cover;
 }
