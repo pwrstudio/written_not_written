@@ -6,9 +6,9 @@
   "use strict";
 
   var $ = require("jquery"),
-    debounce = require('debounce'),
-    slides = require("./components/slides"),
-    slideshow = slides($('#slides'));
+      debounce = require('debounce'),
+      slides = require("./components/slides"),
+      slideshow = slides($('#slides'));
 
   function stopIframe() {
 
@@ -29,6 +29,8 @@
 
     // Init
     slideshow.setup();
+
+    $(".extended-caption").html($('.slide.shown').data("extended"));
 
     // Next image
     $(document).on('click', '.next', function (e) {
