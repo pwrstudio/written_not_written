@@ -12,16 +12,17 @@ function slides(context) {
     currentSlide: {},
     slideContainer: context.children('.slides-container'),
     setup: function setup() {
-      
+
       this.currentSlide = this.slideContainer.children('.shown');
-      
+
       $(".caption").html(this.currentSlide.data("caption"));
+      $(".extended-caption").html(this.currentSlide.data("extended"));
       $('#index').html(this.currentSlide.index() + 1);
       $('#total').text(this.slideContainer.children().length);
 
     },
     next: function next() {
-      
+
       console.log(this.currentSlide);
 
       $(this.currentSlide).removeClass("shown");
@@ -41,14 +42,14 @@ function slides(context) {
 
       $(".caption").html(this.currentSlide.data("caption"));
       $('#index').html(this.currentSlide.index() + 1);
-      $(".extended-caption").html(this.currentSlide.data("extended"));     
+      $(".extended-caption").html(this.currentSlide.data("extended"));
       if(this.currentSlide.data("pdf")) {
-        $(".extended-caption").html('<a href="'+ this.currentSlide.data("pdf") + '" target=_blank download>download pdf</a>');  
+        $(".extended-caption").html('<a href="'+ this.currentSlide.data("pdf") + '" target=_blank download>download pdf</a>');
       }
 
     },
     previous: function previous() {
-      
+
       console.log(this.currentSlide);
 
       $(this.currentSlide).removeClass("shown");
@@ -68,9 +69,9 @@ function slides(context) {
 
       $(".caption").html(this.currentSlide.data("caption"));
       $('#index').html(this.currentSlide.index() + 1);
-      $(".extended-caption").html(this.currentSlide.data("extended"));     
+      $(".extended-caption").html(this.currentSlide.data("extended"));
       if(this.currentSlide.data("pdf")) {
-        $(".extended-caption").html('<a href="'+ this.currentSlide.data("pdf") + '" target=_blank download>download pdf</a>');  
+        $(".extended-caption").html('<a href="'+ this.currentSlide.data("pdf") + '" target=_blank download>download pdf</a>');
       }
     }
   };

@@ -30,8 +30,6 @@
     // Init
     slideshow.setup();
 
-    $(".extended-caption").html($('.slide.shown').data("extended"));
-
     // Next image
     $(document).on('click', '.next', function (e) {
       debounce(slideshow.next(), 200);
